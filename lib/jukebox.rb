@@ -36,8 +36,8 @@ end
 def play (songs)
 song_chosen = false
   puts "Please enter a song name or number:"
+  while song_choice == false
     song_choice = gets.chomp
-    while song_choice == false
       if songs.include?(song_choice)
         puts "Playing #{song_choice}"
         song_choice = true
@@ -46,7 +46,6 @@ song_chosen = false
         song_choice = true
       else
        puts "Invalid input, please try again"
-end
      end
    end
  end
