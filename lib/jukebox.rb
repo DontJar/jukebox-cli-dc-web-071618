@@ -34,7 +34,7 @@ def list (songs)
 end
 
 def play (songs)
-# binding.pry
+song_choice = nil
   puts "Please enter a song name or number:"
     song_choice = gets.chomp
       if song_choice == song_choice.to_i && song_choice < 10
