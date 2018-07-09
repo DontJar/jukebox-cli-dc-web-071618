@@ -37,12 +37,12 @@ def play (songs)
 song_chosen = false
   puts "Please enter a song name or number:"
     song_choice = gets.chomp
-      if song_choice == song_choice.to_i && song_choice < 10
-        puts "Playing #{songs[song_choice-1]}"
-        song_choice = true
       if songs.include?(song_choice)
         puts "Playing #{song_choice}"
         song_choice = true
+        if song_choice == song_choice.to_i && song_choice < 10
+          puts "Playing #{songs[song_choice-1]}"
+          song_choice = true
       else
        puts "Invalud input, please try again"
      end
