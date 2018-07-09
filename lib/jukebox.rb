@@ -47,7 +47,6 @@ song_chosen = false
       else
        puts "Invalid input, please try again"
      end
-   end
  end
 
 def exit_jukebox
