@@ -37,9 +37,9 @@ def play (songs)
 # binding.pry
   puts "Please enter a song name or number:"
     song_choice = gets.chomp
-      if song_choice == song_choice.to_i && song_choice > 9
+      if song_choice == song_choice.to_i && song_choice < 10
         puts "Playing #{songs[song_choice-1]}"
-      if song_choice.include?(song_choice)
+      if songs.include?(song_choice)
         puts "Playing #{song_choice}"
       else
        puts "Invalud input, please try again"
