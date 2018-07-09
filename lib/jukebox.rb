@@ -44,7 +44,7 @@ song_chosen = false
         puts "Playing #{songs[song_choice-1]}"
         song_choice = true
       else
-       puts "Invalud input, please try again"
+       puts "Invalid input, please try again"
      end
    end
  end
