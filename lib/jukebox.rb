@@ -38,13 +38,12 @@ def play (songs)
     song_choice = gets.chomp
         if songs.include?(song_choice)
           puts "Playing #{song_choice}"
-        if song_choice == song_choice.to_i && song_choice < 10
+        elsif song_choice == song_choice.to_i && song_choice < 10
           puts "Playing #{songs[song_choice.to_i-1]}"
         else
           puts "Invalid input, please try again"
         end
       end
-    end
 
 def exit_jukebox
   puts "Goodbye."
