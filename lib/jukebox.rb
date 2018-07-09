@@ -46,6 +46,7 @@ song_chosen = false
         song_choice = true
       else
        puts "Invalid input, please try again"
+end
      end
    end
  end
