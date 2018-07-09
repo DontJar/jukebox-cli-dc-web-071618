@@ -34,7 +34,6 @@ def list (songs)
 end
 
 def play (songs)
-  song_chosen = false
   puts "Please enter a song name or number:"
     song_choice = gets.chomp
       while song_choice == false
@@ -42,7 +41,7 @@ def play (songs)
           puts "Playing #{song_choice}"
           song_choice = true
         elsif song_choice == song_choice.to_i && song_choice < 10
-          puts "Playing #{songs[song_choice-1]}"
+          puts "Playing #{songs[song_choice.to_i-1]}"
           song_choice = true
         else
           puts "Invalid input, please try again"
