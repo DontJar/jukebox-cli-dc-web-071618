@@ -33,13 +33,25 @@ def list (songs)
   end
 end
 
-def play (songs)
+# def play (songs)
+#   puts "Please enter a song name or number:"
+#   song_choice = gets.chomp
+#   if song_choice == song_choice.to_i && song_choice < 10
+#     puts "Playing #{songs[song_choice.to_i-1]}"
+#   elsif songs.include?(song_choice)
+#     puts "Playing #{song_choice}"
+#   else
+#     puts "Invalid input, please try again"
+#   end
+# end
+
+def play(songs)
   puts "Please enter a song name or number:"
-  song_choice = gets.chomp
-  if song_choice == song_choice.to_i && song_choice < 10
-    puts "Playing #{songs[song_choice.to_i-1]}"
-  elsif songs.include?(song_choice)
-    puts "Playing #{song_choice}"
+  song_to_play = gets.chomp
+  if (1..9).to_a.include?(song_to_play.to_i)
+    puts "Playing #{songs[song_to_play.to_i - 1]}"
+  elsif songs.include?(song_to_play)
+    puts "Playing #{song_to_play}"
   else
     puts "Invalid input, please try again"
   end
