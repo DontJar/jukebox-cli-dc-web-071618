@@ -47,26 +47,25 @@ def play (songs)
    end
  end
 
-
 def exit_jukebox
   puts "Goodbye."
 end
 
 def run(songs)
-user_selection = nil
-  until user_selection == "exit"
-    help
-  puts "Please enter a command:"
-    user_selection = gets.chomp
-  case user_selection
-  when "help"
-    help
-  when "list"
-    list(songs)
-  when "play"
-    play(songs)
-  when "exit"
-    exit_jukebox
+  user_selection = nil
+    until user_selection == "exit"
+      help
+    puts "Please enter a command:"
+      user_selection = gets.chomp
+    case user_selection
+    when "help"
+      help
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    when "exit"
+      exit_jukebox
+    end
   end
-end
 end
