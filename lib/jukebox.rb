@@ -41,7 +41,7 @@ def play (songs)
         if songs.include?(song_choice)
           puts "Playing #{song_choice}"
           song_choice = true
-        if song_choice == song_choice.to_i && song_choice < 10
+        elsif song_choice == song_choice.to_i && song_choice < 10
           puts "Playing #{songs[song_choice-1]}"
           song_choice = true
         else
